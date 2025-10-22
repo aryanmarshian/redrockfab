@@ -258,13 +258,16 @@ const Home = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
-                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
-                    Read More{" "}
+                  <Link
+                    to="/services"
+                    className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all"
+                  >
+                    Read More
                     <ArrowRight
                       className="ml-1 group-hover:ml-2 transition-all"
                       size={18}
                     />
-                  </div>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
