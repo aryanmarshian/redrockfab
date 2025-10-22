@@ -19,13 +19,15 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, eyebrow
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`max-w-3xl ${alignClass}`}>
+        <div className={`relative z-10 max-w-3xl ${alignClass}`}>
           {eyebrow ? (
             <div className="inline-block mb-4 px-4 py-1.5 bg-accent/20 rounded-full">
               <p className="text-accent font-semibold text-sm">{eyebrow}</p>
             </div>
           ) : null}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">{title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-primary-foreground">
+            {title}
+          </h1>
           {subtitle ? (
             <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">{subtitle}</p>
           ) : null}
