@@ -1,4 +1,4 @@
-import { Wrench, PenTool, ClipboardCheck, Layers, Users } from "lucide-react";
+import { Wrench, PenTool, ClipboardCheck, Layers, Users, Calculator } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PageHeader from "@/components/PageHeader";
 
@@ -57,6 +57,17 @@ const Services = () => {
         "Schedule management",
         "Quality assurance",
         "On-time delivery",
+      ],
+    },
+    {
+      icon: Calculator,
+      title: "Estimation",
+      description: "Accurate and transparent estimates that help you plan with confidence. We break down materials, labor, and logistics to provide reliable cost projections and value options.",
+      features: [
+        "Detailed quantity takeoffs",
+        "Material and labor breakdowns",
+        "Alternates and value options",
+        "Schedule and lead-time considerations",
       ],
     },
   ];

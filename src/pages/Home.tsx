@@ -59,8 +59,8 @@ const Home = () => {
   ];
 
   const stats = [
-    { value: "3+", label: "Years Experience", icon: TrendingUp },
-    { value: "50+", label: "Projects Completed", icon: Award },
+    { value: "5+", label: "Years Experience", icon: TrendingUp },
+    { value: "120+", label: "Projects Completed", icon: Award },
     { value: "100%", label: "Client Satisfaction", icon: CheckCircle },
   ];
 
@@ -111,7 +111,7 @@ const Home = () => {
                 RedRock Fabrications delivers precision steel fabrication with
                 quality craftsmanship and dedicated support for every project.
               </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   asChild
                   size="lg"
