@@ -56,6 +56,10 @@ const Home = () => {
       title: "Project Management",
       description: "End-to-end oversight ensuring on-time delivery",
     },
+    {
+      title: "Estimation",
+      description: "Accurate and transparent cost breakdowns for smarter planning",
+    },
   ];
 
   const stats = [
