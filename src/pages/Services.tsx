@@ -1,7 +1,6 @@
 import { Wrench, PenTool, ClipboardCheck, Layers, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import PageHeader from "@/components/PageHeader";
 
 const Services = () => {
   const services = [
@@ -64,17 +63,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-primary-foreground/90">
-              Comprehensive steel fabrication solutions tailored to your project's unique requirements.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Services"
+        title="Our Services"
+        subtitle="Comprehensive steel fabrication solutions tailored to your project's unique requirements."
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-background">
@@ -143,12 +136,9 @@ const Services = () => {
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Discuss Your Project?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Contact us today to learn how our comprehensive fabrication services can bring your project to life.
+          <p className="text-lg text-muted-foreground">
+            Contact us to learn how our comprehensive fabrication services can bring your project to life.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-            <Link to="/contact">Get a Quote</Link>
-          </Button>
         </div>
       </section>
     </div>

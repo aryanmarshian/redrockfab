@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Users, Briefcase, TrendingUp, Heart } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 const Careers = () => {
   const benefits = [
@@ -29,18 +30,11 @@ const Careers = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-xl text-primary-foreground/90">
-              Build your career with RedRock Fabrications. We're always looking for talented individuals 
-              who are passionate about quality craftsmanship.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Careers"
+        title="Join Our Team"
+        subtitle="Build your career with RedRock Fabrications. We're always looking for talented individuals who are passionate about quality craftsmanship."
+      />
 
       {/* Benefits Section */}
       <section className="py-20 bg-background">

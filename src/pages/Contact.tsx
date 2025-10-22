@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import PageHeader from "@/components/PageHeader";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,17 +19,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-primary-foreground/90">
-              Get in touch with our team to discuss your steel fabrication needs.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Contact"
+        title="Contact Us"
+        subtitle="Get in touch with our team to discuss your steel fabrication needs."
+      />
 
       {/* Contact Info & Form Section */}
       <section className="py-20 bg-background">

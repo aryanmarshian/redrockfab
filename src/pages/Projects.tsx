@@ -1,22 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import PageHeader from "@/components/PageHeader";
 import projectImage from "@/assets/project-example.jpg";
 
 const Projects = () => {
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
-            <p className="text-xl text-primary-foreground/90">
-              Showcasing our commitment to quality and precision in every steel fabrication project.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Projects"
+        title="Our Projects"
+        subtitle="Showcasing our commitment to quality and precision in every steel fabrication project."
+      />
 
       {/* Projects Section */}
       <section className="py-20 bg-background">
@@ -54,18 +49,34 @@ const Projects = () => {
               </CardContent>
             </Card>
 
-            {/* Placeholder Cards */}
-            {[1, 2].map((index) => (
-              <Card key={index} className="border-border border-dashed">
-                <CardContent className="pt-20 pb-20 text-center">
-                  <div className="text-muted-foreground mb-4">
-                    <div className="w-16 h-16 bg-secondary rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl">📋</span>
+            {/* Placeholder Projects */}
+            {[{title: "Commercial Complex", location: "Rio Rancho, NM", year: "2024"}, {title: "Industrial Facility", location: "Santa Fe, NM", year: "2025"}].map((item, idx) => (
+              <Card key={idx} className="border-border hover:shadow-lg transition-shadow overflow-hidden">
+                <div className="aspect-video w-full overflow-hidden bg-secondary">
+                  <img
+                    src="/placeholder.svg"
+                    alt={`${item.title} placeholder`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="pt-6 pb-6">
+                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Placeholder project showcasing our capabilities. Detailed case study coming soon.
+                  </p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Location:</span>
+                      <span className="font-medium">{item.location}</span>
                     </div>
-                    <p className="font-medium">More projects coming soon</p>
-                    <p className="text-sm mt-2">
-                      We're currently working on several exciting projects across New Mexico.
-                    </p>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Completed:</span>
+                      <span className="font-medium">{item.year}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Tonnage:</span>
+                      <span className="font-medium">—</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

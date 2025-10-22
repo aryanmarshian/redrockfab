@@ -1,5 +1,6 @@
 import { Shield, Heart, Lightbulb, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import PageHeader from "@/components/PageHeader";
 
 const About = () => {
   const values = [
@@ -27,17 +28,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About RedRock Fabrications</h1>
-            <p className="text-xl text-primary-foreground/90">
-              Building the future with precision steel fabrication and unwavering commitment to our values.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="About Us"
+        title="About RedRock Fabrications"
+        subtitle="Building the future with precision steel fabrication and unwavering commitment to our values."
+      />
 
       {/* Mission Section */}
       <section className="py-20 bg-background">
